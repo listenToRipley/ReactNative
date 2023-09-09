@@ -10,12 +10,16 @@ From this point forward, if you see reference to "Native", just assume it is ref
 
 ## React Native Components
 
-The Components compile for the specific systems, but have generalize terms that will then allow them to compile correctly to the related hardware. 
+The Components compile for the specific systems, but have generalize terms that will then allow them to compile correctly target the correct syntax for the related element. 
 
-| Web         | Android        | iOS          | Native JSX   |
-| :---        |    :----:      |    :----:    |    :----:    |
-| `<div>`     | `android.View` |  `UIView`    | `<View>`     |
-| `<input>`   |  `EditText`    | `UITextField`| `<TextInput>`|
+| Native JSX   | Web         | Android        | iOS          |
+| :---         |    :----:   |    :----:      |    :----:    |
+| `<View>`     | `<div>`     | `android.View` |  `UIView`    |
+| `<TextInput>`| `<input>`   |  `EditText`    | `UITextField`|
+
+## Logic
+
+The JS code logic is not compiles the same way as Native components. There is actually a thread that is hosted by Native within the app the allows you the access this logic. The app will teach to the logic through a "translation bridge" provided by Native.
 
 ## Glossary
 
