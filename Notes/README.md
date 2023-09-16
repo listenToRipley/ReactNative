@@ -21,11 +21,11 @@ HTML elements will not work in Native code.
 
 You can see the native components you can use [here](https://reactnative.dev/docs/components-and-apis). They are known as your "core components".
 
-You will use these core components to build your own custom components.
-
-Native is very strict in that elements must live inside of a component that related to function of the content, it should always be able to display that content.
+Each the core components have a core purpose, the content inside of that component must support the function of the element. This is because Native is very strict. The content of the component should always be able to display that content. If is it cannot or the underlying content is not supported by the component, you will get an error.
 
 Example: Text must live inside of a Text component.
+
+You will use these core components to build your own custom components.
 
 ### Styling Components
 
