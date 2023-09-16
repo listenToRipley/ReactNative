@@ -25,6 +25,8 @@ Each the core components have a core purpose, the content inside of that compone
 
 Example: Text must live inside of a Text component.
 
+Each of these core components must be imported.
+
 You will use these core components to build your own custom components.
 
 ### Styling Components
