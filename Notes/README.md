@@ -33,9 +33,13 @@ You will use these core components to build your own custom components.
 
 There is no CSS in Native.
 
-Style will be applied either Inline Styles or StyleSheet objects.
+Style will be applied either Inline Styles or StyleSheet objects, both as passed through props.
 
-These are all written in JS which is based on CSS syntax, but is only a subset of these features.
+These are all written in JS which is based on CSS syntax, but is only a subset of CSS features with some language difference.
+
+When using "style=" inside of an element, keep in mind that not all elements support the use of this inline attribute.
+
+You will need to validate the different types of attributes within style that can be used. Import is the values you supply to them. Attributes that ask for numbers will asked for flat numbers without pt or em or px. The value will be converted to pixels for you.
 
 ## Logic
 

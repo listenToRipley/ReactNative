@@ -3,7 +3,7 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View>
+      <View style={{margin:16, borderWidth:2, borderColor:'red', padding:16}}>
         <Text>Inner Text</Text>
       </View>
       <Text>Another piece of text</Text>
