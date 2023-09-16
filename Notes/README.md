@@ -39,9 +39,19 @@ These are all written in JS which is based on CSS syntax, but is only a subset o
 
 When using "style=" inside of an element, keep in mind that not all elements support the use of this inline attribute.
 
-You will need to validate the different types of attributes within style that can be used. Import is the values you supply to them. Attributes that ask for numbers will asked for flat numbers without pt or em or px. The value will be converted to pixels for you.
+You will need to validate the different types of attributes within style that can be used. Import is the values you supply to them. Attributes that ask for numbers will asked for flat numbers without pt or em or px. The value will be converted to pixels for you. You can use specific values, but you will need to wrap them in quotation marks. Generally, this is only used for percentages.
 
 Best practice is to use style sheets objects since this will allow for more reusability and autocomplete elements.
+
+#### Layouts and Flexbox
+
+Layouts are generally created with Flexbox. If works similarly to it's CSS counterpart.
+
+This is about positioning content inside of a container, it is controlled through the style settings applied to that container. Key in mind, you will be using cross axis, (horizontal/ left to right) and the main axis (vertical/ top to bottom). The directions will be column (main axis) or row (cross axis). Column is applied as the default.
+
+Then there are attributes that will allow you to distribute your content within their axis. Such as justify or align. You can also reverse the order with these.
+
+Unlike CSS, you will not need to apply the display of flex since Native already makes the it available, you will need to apply their associated attributes though to see their effects.
 
 ## Logic
 
