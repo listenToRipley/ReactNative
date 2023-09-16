@@ -43,15 +43,27 @@ You will need to validate the different types of attributes within style that ca
 
 Best practice is to use style sheets objects since this will allow for more reusability and autocomplete elements.
 
+Button does not support styling.
+
 #### Layouts and Flexbox
 
-Layouts are generally created with Flexbox. If works similarly to it's CSS counterpart.
+Layouts are generally created with Flexbox. If works similarly to it's CSS counterpart. 
+
+*Flex cannot be turned off*
 
 This is about positioning content inside of a container, it is controlled through the style settings applied to that container. Key in mind, you will be using cross axis, (horizontal/ left to right) and the main axis (vertical/ top to bottom). The directions will be column (main axis) or row (cross axis). Column is applied as the default.
 
 Then there are attributes that will allow you to distribute your content within their axis. Such as justify or align. You can also reverse the order with these.
 
-Unlike CSS, you will not need to apply the display of flex since Native already makes the it available, you will need to apply their associated attributes though to see their effects.
+Unlike CSS, you will not need to apply the display of flex since Native already makes the it available, you will need to apply their associated attributes though to see their effects. 
+
+If you made changes to the parent element style, then that will be applied to all child elements. Such as:
+
+If you apply row to the main parent element through, this will change all child element default.
+
+The width and height will also be applied to child elements unless changes within the child element.
+
+flex is applied directly to elements within a flex element. It will work similar to grid spacing, but will apply to the total space of the parent element for the main axis. Think of the value of the flex value a segment of the total space.
 
 ## Logic
 
