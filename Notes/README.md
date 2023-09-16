@@ -41,6 +41,8 @@ When using "style=" inside of an element, keep in mind that not all elements sup
 
 You will need to validate the different types of attributes within style that can be used. Import is the values you supply to them. Attributes that ask for numbers will asked for flat numbers without pt or em or px. The value will be converted to pixels for you.
 
+Best practice is to use style sheets objects since this will allow for more reusability and autocomplete elements.
+
 ## Logic
 
 The JS code logic is not compiles the same way as Native components. There is actually a thread that is hosted by Native within the app the allows you the access this logic. The app will teach to the logic through a "translation bridge" provided by Native.
