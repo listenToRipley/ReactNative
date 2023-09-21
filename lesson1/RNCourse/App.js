@@ -14,8 +14,8 @@ export default function App() {
 
   function addGoalHandler() {
     console.log('click');
-    setGoalsList([
-      ...goalsList,
+    setGoalsList((currentGoalsList)=> [
+      ...currentGoalsList,
       goalText,
     ]);
     console.log(goalText);
