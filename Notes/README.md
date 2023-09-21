@@ -31,7 +31,7 @@ You will use these core components to build your own custom components.
 
 ### Styling Components
 
-There is no CSS in Native.
+There is no CSS in Native. *STYLES DO NOT CASCADE IN NATIVE*, meaning there is no style inheritance.
 
 Style will be applied either Inline Styles or StyleSheet objects, both as passed through props.
 
@@ -44,6 +44,12 @@ You will need to validate the different types of attributes within style that ca
 Best practice is to use style sheets objects since this will allow for more reusability and autocomplete elements.
 
 Button does not support styling.
+
+#### Targeting Different Platforms
+
+There are some styling elements that will look different on different systems. This has to do with how the information is translated to their associated systems. 
+
+This can mean the way you nest elements will effect how they are displayed. Example: iOS doesn't support border on Text, but it will on view. Best practice then states we should nest our Text inside of a parent View and apply our styles to that parent View.
 
 #### Layouts and Flexbox
 
@@ -68,6 +74,16 @@ flex is applied directly to elements within a flex element. It will work similar
 ## Logic
 
 The JS code logic is not compiles the same way as Native components. There is actually a thread that is hosted by Native within the app the allows you the access this logic. The app will teach to the logic through a "translation bridge" provided by Native.
+
+Handlers and created functions will work the same as they are written in JS.
+
+### Built in functions
+
+There are built in functions that Native does not support since the functionality within the hardware itself are different. EG there is no onClick, there is onPress instead.
+
+### State
+
+You can handle state using React's useState hooks.
 
 ## CLI
 
