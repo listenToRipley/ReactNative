@@ -45,6 +45,12 @@ Best practice is to use style sheets objects since this will allow for more reus
 
 Button does not support styling.
 
+#### Views
+
+The window on a screen through View does now allow "scrolling". There will not be automated functionality that allows you to use your finger to go down the screen. You must tell your application to allow the window to shift. This will be through "ScrollView".
+
+To use this, the ScrollView should be nested inside a regular view to restrict the sizing and any styling related to that content should be applied to the parent View. To see specifics on options on ScrollView, [see the official documentation](https://reactnative.dev/docs/scrollview)
+
 #### Targeting Different Platforms
 
 There are some styling elements that will look different on different systems. This has to do with how the information is translated to their associated systems. 
