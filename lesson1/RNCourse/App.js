@@ -16,20 +16,20 @@ export default function App() {
 
 
   function goalInputHandle(goalText) {
-    console.log(goalText);
+    // console.log(goalText);
     setGoalText(goalText);
   };
 
   function addGoalHandler() {
-    console.log('click');
+    // console.log('click');
     setGoalsList((currentGoalsList)=> [
       ...currentGoalsList,
       { text: goalText,
         id: Math.random().toString()
       },
     ]);
-    console.log(goalText);
-    console.log(goalsList);
+    // console.log(goalText);
+    // console.log(goalsList);
   };
 
   return (
@@ -42,10 +42,10 @@ export default function App() {
         <Button title='Add Goal' onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
-        <FlatList 
+      <FlatList 
           data={goalsList}
           renderItem={(goalData) => {
-            return <GoalItem text={itemData.item.text} key={goalData.item.key}/>
+            return <GoalItem text={goalData.item.text} key={goalData.item.key} />
           }}
           keyExtractor={(item, index) => {
             return item.id;
