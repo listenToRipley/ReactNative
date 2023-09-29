@@ -39,6 +39,8 @@ If you are to use any Native specific components within the child component, you
 
 Props function the same as they did within React.
 
+Within onChangeText, we had to provide two way binding by using value within an TextInput.
+
 ### Styling Components
 
 There is no CSS in Native. *STYLES DO NOT CASCADE IN NATIVE*, meaning there is no style inheritance.
