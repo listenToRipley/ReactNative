@@ -41,6 +41,10 @@ Props function the same as they did within React.
 
 Within onChangeText, we had to provide two way binding by using value within an TextInput.
 
+#### Interactions
+
+If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable.
+
 ### Styling Components
 
 There is no CSS in Native. *STYLES DO NOT CASCADE IN NATIVE*, meaning there is no style inheritance.
