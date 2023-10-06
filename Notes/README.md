@@ -49,6 +49,14 @@ Touchable has mostly been replaced with Pressable.
 
 You will still pass a method within the Component like onClick, but this one is onPress. The function you pass will provide the associated functionality.
 
+##### Visuals
+
+Visual effects related to interacts will display based on where they are located. The effects will only be applied to the children elements.
+
+On android, there are specific attributes, but with IOS, you will mostly use style functions to get the desired visual effect.
+
+You will need to get the press state within the fucntion.
+
 ### Styling Components
 
 There is no CSS in Native. *STYLES DO NOT CASCADE IN NATIVE*, meaning there is no style inheritance.
