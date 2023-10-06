@@ -1,4 +1,11 @@
-import { StyleSheet, View, TextInput, Button, Modal } from "react-native";
+import { 
+  StyleSheet, 
+  View, 
+  TextInput, 
+  Text,
+  Button, 
+  Modal, 
+  Image } from "react-native";
 import { useState } from "react";
 
 function GoalInput(props) {
@@ -20,6 +27,10 @@ function GoalInput(props) {
       animationType="slide"
     >
       <View style={styles.inputContainer}>
+        <Text>Stand By For Goals</Text>
+        <Image 
+          style={styles.image}
+          source={require('../assets/adaptive-icon.png')}/>
         <TextInput 
           style={styles.textInput}
           placeholder='Your course goal!'
@@ -28,10 +39,18 @@ function GoalInput(props) {
           />
           <View style={styles.buttonContainer}>
             <View style={styles.button}>
-              <Button title='Add Goal' onPress={addGoalHandler} />
+              <Button 
+                title='Add Goal' 
+                onPress={addGoalHandler} 
+                color='#b180f0'  
+                />
             </View>
             <View style={styles.button}>
-              <Button title='Done' onPress={props.updateModal}/>
+              <Button 
+                title='Done' 
+                onPress={props.updateModal}
+                color='#f31282'
+                />
             </View>
           </View>
 
@@ -48,16 +67,23 @@ const styles = StyleSheet.create({
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 24,
-    borderBottomWidth: 1,
-    borderBottomColor: '#cccccc'
+    borderBottomColor: '#cccccc',
+    backgroundColor: '#311b6b'
+  },
+  image: {
+    width: 100,
+    height: 100,
+    margin: 20,
   },
   textInput: {
     borderWidth: 1,
-    borderColor: '#cccccc',
+    borderColor: '#e4d0ff',
+    backgroundColor: '#e4d0ff',
+    borderRadius:6,
+    color: '#120438',
     width: '100%',
     marginRight: 8,
-    padding: 8,
+    padding: 16,
   },
   buttonContainer: {
     flexDirection: 'row',
