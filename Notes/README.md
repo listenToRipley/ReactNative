@@ -43,7 +43,11 @@ Within onChangeText, we had to provide two way binding by using value within an 
 
 #### Interactions
 
-If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable.
+If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable or Touchable.
+
+Touchable has mostly been replaced with Pressable.
+
+You will still pass a method within the Component like onClick, but this one is onPress. The function you pass will provide the associated functionality.
 
 ### Styling Components
 

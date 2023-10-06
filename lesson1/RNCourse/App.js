@@ -22,6 +22,14 @@ export default function App() {
     ]);
   };
 
+  function deleteGoalHandler(id) {
+    setGoalsList(currentGoalsList=> {
+      // create a new list for everything that doesn't include the current ID
+      return currentGoalsList.filter((goal)=> goal.id !== id);
+    });
+    console.log(`GET RID OF IT!, ${id}`);
+  }
+
   return (
     <View style={styles.appContainer}>
       <GoalInput onAddGoal={addGoalHandler} />
@@ -29,7 +37,12 @@ export default function App() {
       <FlatList 
           data={goalsList}
           renderItem={(goalData) => {
-            return <GoalItem text={goalData.item.text} key={goalData.item.key} />
+            return <GoalItem 
+              text={goalData.item.text} 
+              key={goalData.item.key} 
+              id={goalData.item.id}
+              onDeleteItem={deleteGoalHandler}
+              />
           }}
           keyExtractor={(item, index) => {
             return item.id;
