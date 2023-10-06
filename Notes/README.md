@@ -35,6 +35,8 @@ Unlike React, with Native you do not need to import react at the top of your fil
 
 If you are to use any Native specific components within the child component, you will need to import them just as you did on the parent component and them that child component will need to be imported as well to be displayed.
 
+You can nest a child inside of a fragment as well if you have a element that may not be directly part of the app, such as [Status Bar](#expo-specific)
+
 #### Props
 
 Props function the same as they did within React.
@@ -43,13 +45,35 @@ Within onChangeText, we had to provide two way binding by using value within an 
 
 #### Interactions
 
-If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable.
+If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable or Touchable.
+
+Touchable has mostly been replaced with Pressable.
+
+You will still pass a method within the Component like onClick, but this one is onPress. The function you pass will provide the associated functionality.
+
+##### Visuals
+
+Visual effects related to interacts will display based on where they are located. The effects will only be applied to the children elements.
+
+On android, there are specific attributes, but with IOS, you will mostly use style functions to get the desired visual effect.
+
+You will need to get the press state within the function.
+
+#### Images
+
+Instead of using src, you will use `source`
+
+You have to import your images to your component by your require function inside of your src. Then you provide the associated path to the image that you have stored ideally in your assets folder.
+
+This is a relative path from where your component is currently located.
 
 ### Styling Components
 
 There is no CSS in Native. *STYLES DO NOT CASCADE IN NATIVE*, meaning there is no style inheritance.
 
 Style will be applied either Inline Styles or StyleSheet objects, both as passed through props.
+
+If there is an over all styling element that should be applied across your application, you can add it to your app.json under expo.
 
 These are all written in JS which is based on CSS syntax, but is only a subset of CSS features with some language difference.
 
@@ -60,6 +84,10 @@ You will need to validate the different types of attributes within style that ca
 Best practice is to use style sheets objects since this will allow for more reusability and autocomplete elements.
 
 Button does not support styling.
+
+#### Expo Specific
+
+You can modify the status bar with the Status Bar.
 
 #### Views & Scrolling
 

@@ -6,11 +6,14 @@ import {
   FlatList
 } from 'react-native';
 
+import { StatusBar } from 'expo-status-bar';
+
 import GoalItem from './components/GoalItems';
 import GoalInput from './components/GoalInputs';
 
 export default function App() {
   const [goalsList, setGoalsList] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
 
   function addGoalHandler(enterGoalText) {
     // console.log('click');
@@ -22,21 +25,51 @@ export default function App() {
     ]);
   };
 
+  function deleteGoalHandler(id) {
+    setGoalsList(currentGoalsList=> {
+      // create a new list for everything that doesn't include the current ID
+      return currentGoalsList.filter((goal)=> goal.id !== id);
+    });
+    // console.log(`GET RID OF IT!, ${id}`);
+  };
+
+  function modalStateHandler() {
+    setModalVisible(!modalVisible);
+  }
+
+
   return (
-    <View style={styles.appContainer}>
-      <GoalInput onAddGoal={addGoalHandler} />
-      <View style={styles.goalsContainer}>
-      <FlatList 
-          data={goalsList}
-          renderItem={(goalData) => {
-            return <GoalItem text={goalData.item.text} key={goalData.item.key} />
-          }}
-          keyExtractor={(item, index) => {
-            return item.id;
-          }}
-          alwaysBounceVertical={false}/>
+    <>
+      <StatusBar style='light'/>
+      <View style={styles.appContainer}>
+        <Button 
+          title='Add New Goal' 
+          color='#b180f0'
+          onPress={modalStateHandler}  
+          />
+        {modalVisible && <GoalInput 
+          onAddGoal={addGoalHandler} 
+          visibility={modalVisible}
+          updateModal={modalStateHandler}
+          />}
+        <View style={styles.goalsContainer}>
+        <FlatList 
+            data={goalsList}
+            renderItem={(goalData) => {
+              return <GoalItem 
+                text={goalData.item.text} 
+                key={goalData.item.key} 
+                id={goalData.item.id}
+                onDeleteItem={deleteGoalHandler}
+                />
+            }}
+            keyExtractor={(item, index) => {
+              return item.id;
+            }}
+            alwaysBounceVertical={false}/>
+        </View>
       </View>
-    </View>
+    </>
   );
 }
 
