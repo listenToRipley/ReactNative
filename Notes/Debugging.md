@@ -27,3 +27,21 @@ Expo there are additional tools you can use (viewable list by pressing ? in the 
 The two that you may get the most use out of:
 
 - `m` - show you the terminal menu in the emulator window
+
+- `j` - debug remotely
+
+## React Native Tools
+
+You can install react dev tools on your application to get there benefit as well.
+
+`sudo npm install -g react-devtools`
+
+This is a stand alone version of these dev tool. 
+
+You can use the tools by running `react-devtools`
+
+You will have a secondary window open on the emulator allowing you to utilize these tools.
+
+You may need to click on "Debug Remote JS" inside you emulator window under the menu options.
+
+If this doesn't work, try to reload the emulation. You should see a lay out of the components inside the window, ("component tree") once it is running.
