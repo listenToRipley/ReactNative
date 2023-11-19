@@ -168,6 +168,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 ## Additional Notes
 
 - [Debugging](./Debugging.md)
+- [Custom Components](./CustomComponents.md)
 
 ## Glossary
 

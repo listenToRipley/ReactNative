@@ -8,6 +8,8 @@ Provide a number and have the computer guess it.
 
 We start with a screen that allows you to provide a number.
 
+Once a number is entered, we need to start the game.
+
 We will move to another screen where the game really starts.
 
 The computer will provide a number. 
