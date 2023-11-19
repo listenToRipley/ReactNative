@@ -39,6 +39,13 @@ You can run multiple simulators at the same time.
 ## Table of Contents
 
  - [Notes](./Notes/README.md)
+ 
+ Lessons:
+ 
+- [RNCourse](./lessons/RNCourse/) 
+This is a beginning review of what some functionality of Native looks like via a TODO list.
+
+- [MiniGame](./lessons/MiniGame/README.md)
 
 ## Additional Resources
 
