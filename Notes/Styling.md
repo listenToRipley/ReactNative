@@ -64,6 +64,14 @@ The width and height will also be applied to child elements unless changes withi
 
 flex is applied directly to elements within a flex element. It will work similar to grid spacing, but will apply to the total space of the parent element for the main axis. Think of the value of the flex value a segment of the total space.
 
+## Structure
+
+The order in which you are trying to apply different styles and effects will change based on the order which the attributes are applied to the different component since there is not inheritance within these components.
+
+For example if you try to apply a color to parent component, then the text component will remain the default color. You will also will not see the desired changes on nested components.
+
+If you look at [the primary button](../lessons//MiniGame/components/PrimaryButton.js) you can see now we hand to create multiple containers to get the desired styling and interactions since the ripple effect had to be applied directly to the inner pressable element.
+
 ## Shadowing
 
 Box shadow does not exist in Native.

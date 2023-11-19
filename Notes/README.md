@@ -53,6 +53,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Views & Scrolling](./Styling.md/#styling-components)
 - [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
 - [Layouts and Flexbox](./Styling.md/#layouts-and-flexbox)
+- [Structure](./Styling.md/#structure)
 - [Shadowing](./Styling.md/#shadowing)
 
 1. [Debugging](./Debugging.md)

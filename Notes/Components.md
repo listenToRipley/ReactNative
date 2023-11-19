@@ -51,9 +51,11 @@ Many of these options will provide a better UX.
 
 Visual effects related to interacts will display based on where they are located. The effects will only be applied to the children elements.
 
-On android, there are specific attributes, but with IOS, you will mostly use style functions to get the desired visual effect.
+On android, there are specific attributes, but with iSO, you will mostly use style functions to get the desired visual effect.
 
 You will need to get the press state within the function.
+
+Make sure to review [styles](./Styling.md) for specific changes on some attributes.
 
 ## Images
 

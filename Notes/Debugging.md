@@ -45,3 +45,7 @@ You will have a secondary window open on the emulator allowing you to utilize th
 You may need to click on "Debug Remote JS" inside you emulator window under the menu options.
 
 If this doesn't work, try to reload the emulation. You should see a lay out of the components inside the window, ("component tree") once it is running.
+
+## Logic
+
+If the error you are experiencing is related to styling, make sure you consider the [structure](./Styling.md/#structure) of the element.
