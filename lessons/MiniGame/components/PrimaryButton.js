@@ -1,10 +1,20 @@
 import { 
   View,
-  Text 
+  Text,
+  Pressable 
 } from "react-native";
 
 export default function PrimaryButton({children}) {
-  return <View>
-      <Text>{children}</Text>
-    </View>
+  
+  function pressHandler() {
+    console.log('PRESSED!')
+  }
+  
+  return (
+    <Pressable onPress={pressHandler}>
+      <View>
+        <Text>{children}</Text>
+      </View>
+    </Pressable>
+  )
 };

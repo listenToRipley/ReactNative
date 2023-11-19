@@ -9,7 +9,13 @@ export default function StartGameScreen() {
   return (
     <View style={styles.inputContainer}>
 
-    <TextInput style={styles.numInput} maxLength={2} />
+    <TextInput 
+      style={styles.numInput} 
+      maxLength={2} 
+      keyboardType="number-pad"
+      autoCapitalize="none"
+      autoCorrect={false}
+      />
     <PrimaryButton>Reset</PrimaryButton>
     <PrimaryButton>Confirm</PrimaryButton>
 
@@ -24,7 +30,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 24,
     padding:16,
     backgroundColor: '#72063c',
-    color: 'white',
     borderRadius: 8,
     elevation: 8,
     shadowColor: 'black',

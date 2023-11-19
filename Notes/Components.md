@@ -37,9 +37,15 @@ Within onChangeText, we had to provide two way binding by using value within an 
 
 If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable or Touchable.
 
-Touchable has mostly been replaced with Pressable.
+`Touchable` has mostly been replaced with `Pressable`.
 
 You will still pass a method within the Component like onClick, but this one is onPress. The function you pass will provide the associated functionality.
+
+### Inputs
+
+There are a number of functionalities that can be preassigned within input fields. One of the most important being you can designate which keyboard should be opened for an interaction. You can do this with the use of `keyboardType`. You can look at the official docs for more details. There will be some functions that are system specific. 
+
+Many of these options will provide a better UX.
 
 ### Visuals
 
