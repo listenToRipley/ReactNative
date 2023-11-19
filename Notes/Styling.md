@@ -16,6 +16,10 @@ Best practice is to use style sheets objects since this will allow for more reus
 
 Button does not support styling.
 
+## System Specific
+
+Most styling elements can be translated across different systems, but there are some that will be system specific, so you will need to use multiple properties to get the same effect across different system. If any of the sections a subsection for a specified system, then pay close attention to those requirements when crafting your styling.
+
 ## Expo Specific
 
 You can modify the status bar with the Status Bar.
@@ -59,3 +63,22 @@ If you apply row to the main parent element through, this will change all child 
 The width and height will also be applied to child elements unless changes within the child element.
 
 flex is applied directly to elements within a flex element. It will work similar to grid spacing, but will apply to the total space of the parent element for the main axis. Think of the value of the flex value a segment of the total space.
+
+## Shadowing
+
+Box shadow does not exist in Native.
+
+### Android 
+
+You use [`elevation`](https://reactnative.dev/docs/view-style-props#elevation-android). The higher the number, the deeper the shadow will be.
+
+### iOS
+
+You will use [`shadow`](https://reactnative.dev/docs/shadow-props) to apply the same effect. There are multiple shadow properties. 
+
+- `shadowColor`
+- `shadowOpacity`
+- `shadowRadius`
+- `shadowOffset`
+
+These together create the same functionality as a shadow box in standard CSS.

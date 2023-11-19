@@ -48,10 +48,12 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 
 1. [Styling Components](./Styling.md)
 
+- [System Specific](./Styling.md/#system-specific)
 - [Expo Specifics](./Styling.md/#expo-specific)
 - [Views & Scrolling](./Styling.md/#styling-components)
 - [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
 - [Layouts and Flexbox](./Styling.md/#layouts-and-flexbox)
+- [Shadowing](./Styling.md/#shadowing)
 
 1. [Debugging](./Debugging.md)
 
