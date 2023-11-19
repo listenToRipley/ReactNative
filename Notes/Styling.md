@@ -66,7 +66,9 @@ flex is applied directly to elements within a flex element. It will work similar
 
 ## Structure
 
-The order in which you are trying to apply different styles and effects will change based on the order which the attributes are applied to the different component since there is not inheritance within these components.
+*You can apply multiple styles to one component*. You do  this by using an array with the different styles listed.
+
+Keep in mind that the order in which you are trying to apply different styles and effects will change based on the order which the attributes are applied to the different component since there is not inheritance within these components.
 
 For example if you try to apply a color to parent component, then the text component will remain the default color. You will also will not see the desired changes on nested components.
 
