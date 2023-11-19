@@ -8,7 +8,17 @@ Provide a number and have the computer guess it.
 
 We start with a screen that allows you to provide a number.
 
-The next screen will provide a number and two buttons that allow you to reset the game of complete.
+We will move to another screen where the game really starts.
+
+The computer will provide a number. 
+
+If the number is too high, then let the computer know it is too high.
+
+If the number is too low, then let the computer know.
+
+You should have an option to reset the game.
+
+There should be another option that lets the computer know the number matches the given number.
 
 ### Win Conditions
 
