@@ -82,6 +82,12 @@ If you look at [the primary button](../lessons//MiniGame/components/PrimaryButto
 
 Box shadow does not exist in Native.
 
+## Gradients 
+
+Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
+
+[Review the official doc here.](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
+
 ### Android 
 
 You use [`elevation`](https://reactnative.dev/docs/view-style-props#elevation-android). The higher the number, the deeper the shadow will be.
