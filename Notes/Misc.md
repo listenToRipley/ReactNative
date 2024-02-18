@@ -2,7 +2,9 @@
 
 These items don't fall into a specific category for notes, so for now, they will live here.
 
-## Alerts Method
+## Methods
+
+### Alerts
 
 Alerts within Native are actually objects that contain methods that allow you to pass content to display.
 

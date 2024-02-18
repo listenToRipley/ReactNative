@@ -37,6 +37,10 @@ Props function the same as they did within React.
 
 Within onChangeText, we had to provide two way binding by using value within an TextInput.
 
+### Children
+
+You can also pass children, the element's inner text but use the word `children` as your props to the passed component.
+
 ## Interactions
 
 If you want to select items, that are not buttons, you have to provide specific components that will allow this, such as Pressable or Touchable.

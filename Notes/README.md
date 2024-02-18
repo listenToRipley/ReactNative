@@ -40,6 +40,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Visuals](./Components.md/#visuals)
 - [Images](./Components.md/#images)
 - [Custom](./Components.md/#custom)
+- [Safe Area View](./Components.md/#safe-area-view)
 
 1. [Logic](./Logic.md)
 
@@ -67,6 +68,8 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 
 1. [Debugging](./Debugging.md)
 1. [Misc](./Misc.md)
+- [Methods - Alerts](./Misc/#methods)
+- [Navigation](./Misc.md/#navigation)
 
 ## Glossary
 
