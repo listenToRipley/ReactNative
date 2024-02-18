@@ -110,3 +110,9 @@ You can include a background image on your app as well by using the `ImageBackgr
 Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
 
 [Review the official doc here.](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
+
+## Constants
+
+Since we cannot use CSS, in order to share values across your application, you can create file variables through objects that can be imported into other folders and use those values.
+
+Example: [Colors](../lessons/MiniGame/constants/colors.js)
