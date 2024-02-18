@@ -8,19 +8,25 @@ import {
 
 export default function GameScreen(){
   
-
   return (
-    <View>
+    <View style={styles.screen}>
       <Text>Opponent's Guess</Text>
       <Text>GUESS</Text>
-      <View>
+      {/* <View>
         <Text>Higher or Lower</Text>
-        <Button>High</Button>
-        <Button>Low</Button>
+        <Text>High</Text>
+        <Text>Low</Text>
       </View>
       <View>
         <View>LOG ROUNDS</View>
-      </View>
+      </View> */}
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    padding: 12,
+  }
+});
