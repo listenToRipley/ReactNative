@@ -8,7 +8,7 @@ import { useState } from "react";
 import PrimaryButton from "../components/PrimaryButton";
 
 
-export default function StartGameScreen() {
+export default function StartGameScreen({onPickNumber}) {
   const [enteredNumber, setEnteredNumber] = useState('');
 
   const numberInputHandler = (inputText) => { //for changes made tyo the number state
@@ -34,8 +34,8 @@ export default function StartGameScreen() {
       console.log('return an error');
       return;
     }
-    //If valid, move to the next page, (game screen?)
-  
+    //If valid, move to the next page, (game screen)
+    onPickNumber(chosenNumber);//see details in APP file.
   }
 
   return (

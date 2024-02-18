@@ -12,3 +12,6 @@ Some of the common ones are
 
 - `Alert.alert()`
 - `Alert.prompt()`
+
+
+## Navigation
