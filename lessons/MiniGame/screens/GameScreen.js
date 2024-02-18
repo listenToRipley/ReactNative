@@ -12,7 +12,7 @@ export default function GameScreen(){
   
   return (
     <View style={styles.screen}>
-      <Title text="Opponent's Guess"></Title>
+      <Title >Opponent's Guess</Title>
       <Text>GUESS</Text>
       {/* <View>
         <Text>Higher or Lower</Text>
