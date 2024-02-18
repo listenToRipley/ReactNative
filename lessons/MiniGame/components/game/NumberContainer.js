@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet } from "react-native";
 import Colors from "../../constants/colors";
 
-export default function NumberContainer({number}) {
+export default function NumberContainer({children}) {
   return (
     <View style={styles.container}>
-      <Text style={styles.number}>Guessed: {number}</Text>
+      <Text style={styles.number}>Guessed: {children}</Text>
     </View>
   )
 };

@@ -48,7 +48,7 @@ export default function GameScreen({answer, onGameOver}){
     <View style={styles.screen}>
       <Title >Opponent's Guess</Title>
       <View>
-        <NumberContainer number={currentGuess}></NumberContainer>
+        <NumberContainer>{currentGuess}</NumberContainer>
       </View>
       <View>
         <Text>Go higher or lower?</Text>
@@ -61,9 +61,7 @@ export default function GameScreen({answer, onGameOver}){
           </PrimaryButton>
         </View>
       </View>
-      {/* 
-        <View>LOG ROUNDS</View>
-      </View> */}
+      {/* <View>LOG ROUNDS</View>*/}
     </View>
   )
 }
