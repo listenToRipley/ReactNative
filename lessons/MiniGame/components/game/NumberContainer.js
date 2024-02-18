@@ -17,11 +17,10 @@ const styles = StyleSheet.create({
     margin: 24,
     borderRadius: 10,
     alignContent: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   number: {
     color: Colors.accent500,
     fontSize: 36,
-    fontStyle: 'bold',
   }
 });

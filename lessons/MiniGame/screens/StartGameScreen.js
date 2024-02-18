@@ -9,9 +9,11 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 import Colors from "../constants/colors"
 
 
-export default function StartGameScreen({onPickNumber}) {
+export default function StartGameScreen({onPickNumber, gameOver}) {
   const [enteredNumber, setEnteredNumber] = useState('');
   //TODO: FIX the reset text field
+
+  gameOver(false);
 
   const numberInputHandler = (inputText) => { //for changes made tyo the number state
     setEnteredNumber(inputText);

@@ -3,27 +3,46 @@ import {
   View, 
   Text,
   Button,
-  StyleSheet
+  StyleSheet,
+  Alert
 } from "react-native";
 
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
+import PrimaryButton from "../components/ui/PrimaryButton";
 
-export default function GameScreen({guess}){
-  [currentGuess, setCurrentGuess] = useState(initialGuess);
-  [hint, setHint] = useState(null);
-
-
+export default function GameScreen({guess, gameOver}){
+  const [currentGuess, setCurrentGuess] = useState(initialGuess);
+  const [minBoundary, setMinBoundary] = useState(1); 
+  const [maxBoundary, setMaxBoundary] = useState(100); 
   //number that you should be guessing:
   const generateRandomNumber = (min, max, exclude) => {//exclude should be the first number guessed.
     const randomNum = Math.floor(Math.random() * (max - min)) + min;
     return randomNum === exclude ? generateRandomNumber(min, max, exclude) : setCurrentGuess[randomNum];
   };
-  
-  const initialGuess = generateRandomNumber(1,100,guess);
+
+  const initialGuess = generateRandomNumber(minBoundary,maxBoundary,guess);
+
+  const nextGuessHandler = (direction) => {
+    if (
+      (direction === 'lower' && currentGuess < guess) || 
+      (direction === 'higher' && currentNum  > guess)) {
+        Alert.alert("Don't do that!", "It's wrong", [{text: 'Sorry!', style: 'cancel'}])
+        return;
+    }
+
+    direction === 'lower' ?  setMaxBoundary(currentGuess) : setMinBoundary(currentGuess + 1);
+    if (maxBoundary != minBoundary) {
+      let newNum = generateRandomNumber(minBoundary, maxBoundary, currentGuess); 
+      setCurrentGuess(newNum);
+    }
+  };
 
   useEffect(() => {
-    currentGuess > guess? setHint('high') : setHint('low')
+    if (guess === currentGuess) {
+      console.log('RESULT!');
+      gameOver(true);
+    }
   }, [currentGuess])
 
   return (
@@ -33,7 +52,11 @@ export default function GameScreen({guess}){
         <NumberContainer number={guess}></NumberContainer>
       </View>
       <View>
-        <Text>Hint: {hint}</Text>
+        <Text>Hint</Text>
+        <View>
+          <PrimaryButton onPress={nextGuessHandler.bind(this, 'higher')}>+</PrimaryButton>
+          <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>-</PrimaryButton>
+        </View>
       </View>
       {/* <View>
         <Text>Higher or Lower</Text>
