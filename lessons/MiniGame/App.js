@@ -7,6 +7,7 @@ SafeAreaView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
+import Colors from './constants/colors';
 
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
   let screen = userNumber ? <GameScreen onPickNumber={pickedNumberHandler}/> : <StartGameScreen onPickNumber={pickedNumberHandler}/>;
 
   return (
-    <LinearGradient colors={['#4e0329','#ddb52f']} style={styles.rootScreen}>
+    <LinearGradient colors={[Colors.primary700,Colors.accent500]} style={styles.rootScreen}>
       <ImageBackground 
         source={require('./images/diceRoll.jpg')} 
         resizeMode="cover"

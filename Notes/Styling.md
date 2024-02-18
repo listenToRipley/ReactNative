@@ -113,6 +113,6 @@ Expo itself provide an extra component to provide `LinearGradient`, via the `exp
 
 ## Constants
 
-Since we cannot use CSS, in order to share values across your application, you can create file variables through objects that can be imported into other folders and use those values.
+Since we cannot use CSS, in order to share values across your application, you can create file variables through objects that can be imported into other folders and use those values. You will export the object and import into the component you want to use it on and use object keys.
 
 Example: [Colors](../lessons/MiniGame/constants/colors.js)
