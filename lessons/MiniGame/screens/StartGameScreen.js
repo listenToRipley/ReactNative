@@ -10,6 +10,7 @@ import PrimaryButton from "../components/PrimaryButton";
 
 export default function StartGameScreen({onPickNumber}) {
   const [enteredNumber, setEnteredNumber] = useState('');
+  //TODO: FIX the reset text field
 
   const numberInputHandler = (inputText) => { //for changes made tyo the number state
     setEnteredNumber(inputText);
