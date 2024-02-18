@@ -82,20 +82,6 @@ If you look at [the primary button](../lessons//MiniGame/components/PrimaryButto
 
 Box shadow does not exist in Native.
 
-## Images
-
-Images will have a special styling option called `imageStyle`, which has a higher precedence than other styles provided. You will still created the CSS within styles, and best practice dictates this should be placed at the bottom of the CSS content.
-
-### Background Images
-
-You can include a background image on your app as well by using the `ImageBackground` element provided by Native. Make sure it is the parent of the element you want to see the image on.
-
-## Gradients 
-
-Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
-
-[Review the official doc here.](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
-
 ### Android 
 
 You use [`elevation`](https://reactnative.dev/docs/view-style-props#elevation-android). The higher the number, the deeper the shadow will be.
@@ -110,3 +96,17 @@ You will use [`shadow`](https://reactnative.dev/docs/shadow-props) to apply the 
 - `shadowOffset`
 
 These together create the same functionality as a shadow box in standard CSS.
+
+## Images
+
+Images will have a special styling option called `imageStyle`, which has a higher precedence than other styles provided. You will still created the CSS within styles, and best practice dictates this should be placed at the bottom of the CSS content.
+
+### Background Images
+
+You can include a background image on your app as well by using the `ImageBackground` element provided by Native. Make sure it is the parent of the element you want to see the image on.
+
+## Gradients 
+
+Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
+
+[Review the official doc here.](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)

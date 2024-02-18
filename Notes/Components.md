@@ -27,6 +27,10 @@ If you are to use any Native specific components within the child component, you
 
 You can nest a child inside of a fragment as well if you have a element that may not be directly part of the app, such as [Status Bar](#expo-specific)
 
+## Alerts
+
+Alert is not actually a component, but instead an object that holds a method that then tells they system what it is attempting to do.
+
 ## Props
 
 Props function the same as they did within React.
@@ -65,6 +69,7 @@ You have to import your images to your component by your require function inside
 
 This is a relative path from where your component is currently located.
 
+For styling images, make sure you review [the related style section for notes](./Styling.md/#images)
 
 ## Custom
 

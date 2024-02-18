@@ -47,6 +47,15 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [State](./Logic.md/#state)
 
 1. [Styling Components](./Styling.md)
+- [System Specific](./Styling.md/#system-specific)
+- [Expo Specific](./Styling.md/#expo-specific)
+- [View & Scrolling](./Styling.md/#views--scrolling)
+- [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
+- [Layout and Flexbox](./Styling.md/#layouts-and-flexbox)
+- [Structure](./Styling.md/#structure)
+- [Shadowing](./Styling.md/#shadowing)
+- [Images](./Styling.md/#images)
+- [Gradients](./Styling.md/#gradients)
 
 - [System Specific](./Styling.md/#system-specific)
 - [Expo Specifics](./Styling.md/#expo-specific)
@@ -57,6 +66,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Shadowing](./Styling.md/#shadowing)
 
 1. [Debugging](./Debugging.md)
+1. [Misc](./Misc.md)
 
 ## Glossary
 
