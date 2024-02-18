@@ -15,3 +15,5 @@ Some of the common ones are
 
 
 ## Navigation
+
+One option is you can use conditional on the App.js to determine which screen should currently be rendered.
