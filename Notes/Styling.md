@@ -82,6 +82,14 @@ If you look at [the primary button](../lessons//MiniGame/components/PrimaryButto
 
 Box shadow does not exist in Native.
 
+## Images
+
+Images will have a special styling option called `imageStyle`, which has a higher precedence than other styles provided. You will still created the CSS within styles, and best practice dictates this should be placed at the bottom of the CSS content.
+
+### Background Images
+
+You can include a background image on your app as well by using the `ImageBackground` element provided by Native. Make sure it is the parent of the element you want to see the image on.
+
 ## Gradients 
 
 Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
