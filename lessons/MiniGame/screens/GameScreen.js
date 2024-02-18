@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, useEffect } from "react";
 import {
   View, 
   Text,
@@ -9,26 +9,31 @@ import {
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
 
-
-//number that you should be guessing:
-const generateRandomNumber = (min, max, exclude) => {//exclude should be the first number guessed.
-  const randomNum = Math.floor(Math.random() * (max - min)) + min;
-  if (randomNum === exclude) {
-    return generateRandomNumber(min, max, exclude)
-  } else {
-    return setCurrentGuess[randomNum];
-  }
-};
-
 export default function GameScreen({guess}){
-  const initialGuess = generateRandomNumber(1,100,guess);
   [currentGuess, setCurrentGuess] = useState(initialGuess);
+  [hint, setHint] = useState(null);
+
+
+  //number that you should be guessing:
+  const generateRandomNumber = (min, max, exclude) => {//exclude should be the first number guessed.
+    const randomNum = Math.floor(Math.random() * (max - min)) + min;
+    return randomNum === exclude ? generateRandomNumber(min, max, exclude) : setCurrentGuess[randomNum];
+  };
+  
+  const initialGuess = generateRandomNumber(1,100,guess);
+
+  useEffect(() => {
+    currentGuess > guess? setHint('high') : setHint('low')
+  }, [currentGuess])
 
   return (
     <View style={styles.screen}>
       <Title >Opponent's Guess</Title>
       <View>
         <NumberContainer number={guess}></NumberContainer>
+      </View>
+      <View>
+        <Text>Hint: {hint}</Text>
       </View>
       {/* <View>
         <Text>Higher or Lower</Text>
