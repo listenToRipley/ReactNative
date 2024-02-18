@@ -15,7 +15,7 @@ const generateRandomNumber = (min, max, exclude) => {//exclude should be the fir
   return randomNum === exclude ? generateRandomNumber(min, max, exclude) : randomNum;
 };
 
-export default function GameScreen({answer, gameOver}){
+export default function GameScreen({answer, onGameOver}){
   const [minBoundary, setMinBoundary] = useState(1); 
   const [maxBoundary, setMaxBoundary] = useState(100); 
   const [currentGuess, setCurrentGuess] = useState(null);
@@ -42,9 +42,9 @@ export default function GameScreen({answer, gameOver}){
   useEffect(() => {
     if (answer === currentGuess) {
       console.log('RESULT!');
-      gameOver();
+      onGameOver();
     } 
-  }, [currentGuess])
+  }, [currentGuess, answer, onGameOver])
 
   return (
     <View style={styles.screen}>

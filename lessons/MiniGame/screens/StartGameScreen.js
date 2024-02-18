@@ -13,8 +13,6 @@ export default function StartGameScreen({onPickNumber, gameOver}) {
   const [enteredNumber, setEnteredNumber] = useState('');
   //TODO: FIX the reset text field
 
-  gameOver(false);
-
   const numberInputHandler = (inputText) => { //for changes made tyo the number state
     setEnteredNumber(inputText);
   };
