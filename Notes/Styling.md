@@ -14,8 +14,6 @@ You will need to validate the different types of attributes within style that ca
 
 Best practice is to use style sheets objects since this will allow for more reusability and autocomplete elements.
 
-Button does not support styling.
-
 To apply something to all content, then it should be applied at the either the `app.json` level or `App.js` file under it's own styles. 
 
 ## System Specific
@@ -110,3 +108,17 @@ You can include a background image on your app as well by using the `ImageBackgr
 Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
 
 [Review the official doc here.](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
+
+## Constants
+
+Since we cannot use CSS, in order to share values across your application, you can create file variables through objects that can be imported into other folders and use those values. You will export the object and import into the component you want to use it on and use object keys.
+
+Example: [Colors](../lessons/MiniGame/constants/colors.js)
+
+## Misc 
+
+*This section covers random notes about styling in Native*
+
+Button does not support styling.
+
+Text components do not support borders.
