@@ -19,8 +19,13 @@ export default function App() {
     setUserNumber(pickedNumber)
   };
 
-  let screen = userNumber ? <GameScreen guess={userNumber} gameOver={setGameIsOver}/> : <StartGameScreen onPickNumber={pickedNumberHandler} gameOver={setGameIsOver}/>;
+  const gameOverHandler = () => {
+    setGameIsOver(true)
+  };
+
+  let screen = userNumber ? <GameScreen answer={userNumber} gameOver={gameOverHandler}/> : <StartGameScreen onPickNumber={pickedNumberHandler} gameOver={setGameIsOver}/>;
   
+
   if (gameIsOver) {
     <GameOverScreen></GameOverScreen>
   }

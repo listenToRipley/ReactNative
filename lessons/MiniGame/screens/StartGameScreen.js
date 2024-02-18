@@ -26,7 +26,7 @@ export default function StartGameScreen({onPickNumber, gameOver}) {
   const confirmInputHandler = (inputText) => { //check the state of the input value that is pass to the onSubmit in the Confirm button
     //Check if: value is a number, if the value of the number is between 1-99.
     const chosenNumber = parseInt(enteredNumber);
-    if (isNaN(chosenNumber) || chosenNumber > 99 || chosenNumber <= 0) {
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
       Alert.alert(
         'Invalid Input', 
         'Number has to be a number between 1 and 99', 
