@@ -43,11 +43,10 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Safe Area View](./Components.md/#safe-area-view)
 
 1. [Logic](./Logic.md)
-
-- [Built in functions](./Logic.md/#built-in-functions)
-- [State](./Logic.md/#state)
-
+    - [Built in functions](./Logic.md/#built-in-functions)
+    - [State](./Logic.md/#state)
 1. [Styling Components](./Styling.md)
+
 - [System Specific](./Styling.md/#system-specific)
 - [Expo Specific](./Styling.md/#expo-specific)
 - [View & Scrolling](./Styling.md/#views--scrolling)
