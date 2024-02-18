@@ -27,11 +27,19 @@ If you are to use any Native specific components within the child component, you
 
 You can nest a child inside of a fragment as well if you have a element that may not be directly part of the app, such as [Status Bar](#expo-specific)
 
+## Alerts
+
+Alert is not actually a component, but instead an object that holds a method that then tells they system what it is attempting to do.
+
 ## Props
 
 Props function the same as they did within React.
 
 Within onChangeText, we had to provide two way binding by using value within an TextInput.
+
+### Children
+
+You can also pass children, the element's inner text but use the word `children` as your props to the passed component.
 
 ## Interactions
 
@@ -65,9 +73,16 @@ You have to import your images to your component by your require function inside
 
 This is a relative path from where your component is currently located.
 
+For styling images, make sure you review [the related style section for notes](./Styling.md/#images)
 
 ## Custom
 
 It is important to review the source code of a given [out of the box component](https://github.com/facebook/react-native/tree/main/packages/react-native/Libraries/Components) to see it's details. 
 
 The important thing to remember about pre-built components is at their core they are the same as any components we can build ourselves. If you have unique functionality you are expecting to provide, a custom component might make sense.
+
+## Safe Area View
+
+`SafeAreaView` - This helps with provides automated spacing based on the system you are running on. 
+
+Usually this is imported at the `App.js` of your document so it will apply to the whole application. This should be applied to the main body, not before any background or all applying content.

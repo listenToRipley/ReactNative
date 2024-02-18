@@ -16,6 +16,8 @@ Best practice is to use style sheets objects since this will allow for more reus
 
 Button does not support styling.
 
+To apply something to all content, then it should be applied at the either the `app.json` level or `App.js` file under it's own styles. 
+
 ## System Specific
 
 Most styling elements can be translated across different systems, but there are some that will be system specific, so you will need to use multiple properties to get the same effect across different system. If any of the sections a subsection for a specified system, then pay close attention to those requirements when crafting your styling.
@@ -64,6 +66,8 @@ The width and height will also be applied to child elements unless changes withi
 
 flex is applied directly to elements within a flex element. It will work similar to grid spacing, but will apply to the total space of the parent element for the main axis. Think of the value of the flex value a segment of the total space.
 
+`flex: 1` will provide the related style to be applied to the whole screen or parent container.
+
 ## Structure
 
 *You can apply multiple styles to one component*. You do  this by using an array with the different styles listed.
@@ -92,3 +96,17 @@ You will use [`shadow`](https://reactnative.dev/docs/shadow-props) to apply the 
 - `shadowOffset`
 
 These together create the same functionality as a shadow box in standard CSS.
+
+## Images
+
+Images will have a special styling option called `imageStyle`, which has a higher precedence than other styles provided. You will still created the CSS within styles, and best practice dictates this should be placed at the bottom of the CSS content.
+
+### Background Images
+
+You can include a background image on your app as well by using the `ImageBackground` element provided by Native. Make sure it is the parent of the element you want to see the image on.
+
+## Gradients 
+
+Expo itself provide an extra component to provide `LinearGradient`, via the `expo install expo-linear-gradient`.
+
+[Review the official doc here.](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)

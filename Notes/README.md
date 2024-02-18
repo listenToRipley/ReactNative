@@ -33,24 +33,42 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 ## Additional Notes
 
 1. [Components](./Components.md)
-    - [Child](./Components.md/#child-components)
-    - [Props](./Components.md/#props)
-    - [Interactions](./Components.md/#interactions)
-    - [Visuals](./Components.md/#visuals)
-    - [Images](./Components.md/#images)
-    - [Custom](./Components.md/#custom)
+
+- [Child](./Components.md/#child-components)
+- [Props](./Components.md/#props)
+- [Interactions](./Components.md/#interactions)
+- [Visuals](./Components.md/#visuals)
+- [Images](./Components.md/#images)
+- [Custom](./Components.md/#custom)
+- [Safe Area View](./Components.md/#safe-area-view)
+
 1. [Logic](./Logic.md)
     - [Built in functions](./Logic.md/#built-in-functions)
     - [State](./Logic.md/#state)
 1. [Styling Components](./Styling.md)
-    - [System Specific](./Styling.md/#system-specific)
-    - [Expo Specifics](./Styling.md/#expo-specific)
-    - [Views & Scrolling](./Styling.md/#styling-components)
-    - [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
-    - [Layouts and Flexbox](./Styling.md/#layouts-and-flexbox)
-    - [Structure](./Styling.md/#structure)
-    - [Shadowing](./Styling.md/#shadowing)
+
+- [System Specific](./Styling.md/#system-specific)
+- [Expo Specific](./Styling.md/#expo-specific)
+- [View & Scrolling](./Styling.md/#views--scrolling)
+- [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
+- [Layout and Flexbox](./Styling.md/#layouts-and-flexbox)
+- [Structure](./Styling.md/#structure)
+- [Shadowing](./Styling.md/#shadowing)
+- [Images](./Styling.md/#images)
+- [Gradients](./Styling.md/#gradients)
+
+- [System Specific](./Styling.md/#system-specific)
+- [Expo Specifics](./Styling.md/#expo-specific)
+- [Views & Scrolling](./Styling.md/#styling-components)
+- [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
+- [Layouts and Flexbox](./Styling.md/#layouts-and-flexbox)
+- [Structure](./Styling.md/#structure)
+- [Shadowing](./Styling.md/#shadowing)
+
 1. [Debugging](./Debugging.md)
+1. [Misc](./Misc.md)
+- [Methods - Alerts](./Misc/#methods)
+- [Navigation](./Misc.md/#navigation)
 
 ## Glossary
 
