@@ -16,35 +16,33 @@ const generateRandomNumber = (min, max, exclude) => {//exclude should be the fir
 };
 
 export default function GameScreen({answer, onGameOver}){
+  const initialGuess = generateRandomNumber(1,100,answer);
   const [minBoundary, setMinBoundary] = useState(1); 
   const [maxBoundary, setMaxBoundary] = useState(100); 
-  const [currentGuess, setCurrentGuess] = useState(null);
-
-  useEffect(() => {
-    const initialGuess = generateRandomNumber(minBoundary,maxBoundary,answer);
-    setCurrentGuess(initialGuess)
-  }, [])
-
-  //TODO: fix handler, guess isn't changing on click.
-  const nextGuessHandler = (direction) => {
-    if (
-      (direction === 'lower' && currentGuess < answer) || 
-      (direction === 'higher' && currentNum  > answer)) {
-        Alert.alert("Don't do that!", "It's wrong", [{text: 'Sorry!', style: 'cancel'}])
-        return; //exit
-    }
-
-    direction === 'lower' ?  setMaxBoundary(currentGuess) : setMinBoundary(currentGuess + 1);
-    let newNum = generateRandomNumber(minBoundary, maxBoundary, currentGuess); 
-    setCurrentGuess(newNum);
-  };
+  const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
   useEffect(() => {
     if (answer === currentGuess) {
-      console.log('RESULT!');
       onGameOver();
     } 
+    currentGuess;
   }, [currentGuess, answer, onGameOver])
+
+  //TODO: fix handler, guess isn't changing on click.
+  const nextGuessHandler = (direction) => {
+    Alert.prompt('press', `you clicks ${direction}`, [{text: 'leave', styles: 'canceled'}])
+    if (
+      (direction === 'lower' && currentGuess < answer) || 
+      (direction === 'higher' && currentGuess  > answer)) {
+        Alert.alert("Don't do that!", "It's wrong", [{text: 'Sorry!', style: 'cancel'}])
+        return; //exit
+    }
+    direction === 'lower' ?  
+      setMaxBoundary(currentGuess) : 
+      setMinBoundary(currentGuess + 1);
+    let newNum = generateRandomNumber(minBoundary, maxBoundary, currentGuess); 
+    setCurrentGuess(newNum);
+  };
 
   return (
     <View style={styles.screen}>
@@ -55,16 +53,15 @@ export default function GameScreen({answer, onGameOver}){
       <View>
         <Text>Go higher or lower?</Text>
         <View>
-          <PrimaryButton onPress={nextGuessHandler.bind(this, 'higher')}>+</PrimaryButton>
-          <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>-</PrimaryButton>
+          <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
+            -
+          </PrimaryButton>
+          <PrimaryButton onPress={nextGuessHandler.bind(this, 'higher')}>
+            +
+          </PrimaryButton>
         </View>
       </View>
-      {/* <View>
-        <Text>Higher or Lower</Text>
-        <Text>High</Text>
-        <Text>Low</Text>
-      </View>
-      <View>
+      {/* 
         <View>LOG ROUNDS</View>
       </View> */}
     </View>
