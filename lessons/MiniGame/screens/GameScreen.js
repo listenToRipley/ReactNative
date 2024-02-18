@@ -10,39 +10,58 @@ import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
 
 //number that you should be guessing:
-const generateRandomNumber = (min, max, exclude) => {//exclude should be the first number guessed.
-  const randomNum = Math.floor(Math.random() * (max - min)) + min;
-  return randomNum === exclude ? generateRandomNumber(min, max, exclude) : randomNum;
-};
+function generateRandomBetween(min, max, exclude) {
+  const rndNum = Math.floor(Math.random() * (max - min)) + min;
 
-export default function GameScreen({answer, onGameOver}){
-  const initialGuess = generateRandomNumber(1,100,answer);
-  const [minBoundary, setMinBoundary] = useState(1); 
-  const [maxBoundary, setMaxBoundary] = useState(100); 
+  if (rndNum === exclude) {
+    return generateRandomBetween(min, max, exclude);
+  } else {
+    return rndNum;
+  }
+}
+
+let minBoundary = 1;
+let maxBoundary = 100;
+
+export default function GameScreen({ answer, onGameOver }) {
+  const initialGuess = generateRandomBetween(
+    1,
+    100,
+    answer
+  );
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
   useEffect(() => {
-    if (answer === currentGuess) {
+    if (currentGuess === answer) {
       onGameOver();
-    } 
-    currentGuess;
-  }, [currentGuess, answer, onGameOver])
-
-  //TODO: fix handler, guess isn't changing on click.
-  const nextGuessHandler = (direction) => {
-    Alert.prompt('press', `you clicks ${direction}`, [{text: 'leave', styles: 'canceled'}])
-    if (
-      (direction === 'lower' && currentGuess < answer) || 
-      (direction === 'higher' && currentGuess  > answer)) {
-        Alert.alert("Don't do that!", "It's wrong", [{text: 'Sorry!', style: 'cancel'}])
-        return; //exit
     }
-    direction === 'lower' ?  
-      setMaxBoundary(currentGuess) : 
-      setMinBoundary(currentGuess + 1);
-    let newNum = generateRandomNumber(minBoundary, maxBoundary, currentGuess); 
-    setCurrentGuess(newNum);
-  };
+  }, [currentGuess, answer, onGameOver]);
+
+  function nextGuessHandler(direction) {
+    console.log('clicked : ', direction)
+    if (
+      (direction === 'lower' && currentGuess < answer) ||
+      (direction === 'higher' && currentGuess > answer)
+    ) {
+      Alert.alert("Don't lie!", 'You know that this is wrong...', [
+        { text: 'Sorry!', style: 'cancel' },
+      ]);
+      return;
+    }
+
+    if (direction === 'lower') {
+      maxBoundary = currentGuess;
+    } else {
+      minBoundary = currentGuess + 1;
+    }
+
+    const newRndNum = generateRandomBetween(
+      minBoundary,
+      maxBoundary,
+      currentGuess
+    );
+    setCurrentGuess(newRndNum);
+  }
 
   return (
     <View style={styles.screen}>
