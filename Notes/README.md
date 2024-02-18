@@ -56,6 +56,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Shadowing](./Styling.md/#shadowing)
 - [Images](./Styling.md/#images)
 - [Gradients](./Styling.md/#gradients)
+- [Constants](./Styling.md/#constants)
 
 - [System Specific](./Styling.md/#system-specific)
 - [Expo Specifics](./Styling.md/#expo-specific)
