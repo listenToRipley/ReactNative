@@ -4,13 +4,13 @@ import Colors from "../../constants/colors";
 export default function Card({children}) {
 
   return (
-    <View style={styles.root}>{children}</View>
+    <View style={styles.card}>{children}</View>
   )
 
 };
 
 const styles = StyleSheet.create({
-  root: {
+  card: {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 36,

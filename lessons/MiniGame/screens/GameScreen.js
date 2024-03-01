@@ -8,6 +8,7 @@ import {
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
+import Card from "../components/ui/Card";
 
 //number that you should be guessing:
 function generateRandomBetween(min, max, exclude) {
