@@ -18,7 +18,7 @@ function generateRandomBetween(min, max, exclude) {
   } else {
     return rndNum;
   }
-}
+};
 
 let minBoundary = 1;
 let maxBoundary = 100;
@@ -43,17 +43,17 @@ export default function GameScreen({ answer, onGameOver }) {
       (direction === 'lower' && currentGuess < answer) ||
       (direction === 'higher' && currentGuess > answer)
     ) {
-      Alert.alert("Don't lie!", 'You know that this is wrong...', [
+      Alert.alert("Wrong way!", 'Change direction', [
         { text: 'Sorry!', style: 'cancel' },
       ]);
       return;
-    }
+    };
 
     if (direction === 'lower') {
       maxBoundary = currentGuess;
     } else {
       minBoundary = currentGuess + 1;
-    }
+    };
 
     const newRndNum = generateRandomBetween(
       minBoundary,
@@ -61,7 +61,7 @@ export default function GameScreen({ answer, onGameOver }) {
       currentGuess
     );
     setCurrentGuess(newRndNum);
-  }
+  };
 
   return (
     <View style={styles.screen}>

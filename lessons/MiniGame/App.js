@@ -30,7 +30,7 @@ export default function App() {
   
 
   if (gameIsOver && userNumber) {
-    <GameOverScreen></GameOverScreen>
+    screen = <GameOverScreen></GameOverScreen>
   }
 
   return (
