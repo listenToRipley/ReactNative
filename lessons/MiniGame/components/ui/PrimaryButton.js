@@ -7,7 +7,7 @@ import {
 import Colors from '../../constants/colors';
 
 export default function PrimaryButton({children, onSubmit}) {
-  console.log(onSubmit)
+
   return (
     <View style={styles.buttonOuterContainer}>
       <Pressable

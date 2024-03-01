@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet } from "react-native";
-import Color from "../../constants/colors"
 
 export default function Title({children}) {
   return (
