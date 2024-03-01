@@ -24,13 +24,17 @@ export default function App() {
     setGameIsOver(true)
   };
 
+  const resetNumber = () => {
+    setUserNumber(null);
+  }
+
   let screen = userNumber ? 
     <GameScreen answer={userNumber} onGameOver={gameOverHandler}/> : 
     <StartGameScreen onPickNumber={pickedNumberHandler}/>;
   
 
   if (gameIsOver && userNumber) {
-    screen = <GameOverScreen></GameOverScreen>
+    screen = <GameOverScreen resetGame={resetNumber}/>
   }
 
   return (
