@@ -9,7 +9,7 @@ import PrimaryButton from "../components/ui/PrimaryButton";
 import Colors from "../constants/colors"
 
 
-export default function StartGameScreen({onPickNumber, gameOver}) {
+export default function StartGameScreen({onPickNumber}) {
   const [enteredNumber, setEnteredNumber] = useState('');
   //TODO: FIX the reset text field
 
@@ -21,7 +21,7 @@ export default function StartGameScreen({onPickNumber, gameOver}) {
     setEnteredNumber('');
   }
   
-  const confirmInputHandler = (inputText) => { //check the state of the input value that is pass to the onSubmit in the Confirm button
+  const confirmInputHandler = () => { //check the state of the input value that is pass to the onSubmit in the Confirm button
     //Check if: value is a number, if the value of the number is between 1-99.
     const chosenNumber = parseInt(enteredNumber);
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
@@ -38,6 +38,7 @@ export default function StartGameScreen({onPickNumber, gameOver}) {
     }
     //If valid, move to the next page, (game screen)
     onPickNumber(chosenNumber);//see details in APP file.
+    console.log(`picked number ${chosenNumber}`)
   }
 
   return (
@@ -55,7 +56,7 @@ export default function StartGameScreen({onPickNumber, gameOver}) {
       <View style={styles.buttonsContain}>
         <View style={styles.buttonContain}>
           <PrimaryButton
-          onPress={resetInputHandler}>Reset</PrimaryButton>
+          onSubmit={resetInputHandler}>Reset</PrimaryButton>
         </View>
         <View style={styles.buttonContain}>
           <PrimaryButton 

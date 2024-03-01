@@ -72,10 +72,10 @@ export default function GameScreen({ answer, onGameOver }) {
       <View>
         <Text>Go higher or lower?</Text>
         <View>
-          <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>
+          <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
             -
           </PrimaryButton>
-          <PrimaryButton onPress={nextGuessHandler.bind(this, 'higher')}>
+          <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
             +
           </PrimaryButton>
         </View>

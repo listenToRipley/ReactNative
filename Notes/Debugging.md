@@ -53,3 +53,5 @@ If the error you are experiencing is related to styling, make sure you consider 
 ## Bag of tricks
 
 If expo suddenly stops working and you get an error about the system not correcting to the server, try running `watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start --reset-cache`
+
+If you are having issue with expo on your phone you can always try just clearing the phone's cache by running `npm start --reset-cache`
