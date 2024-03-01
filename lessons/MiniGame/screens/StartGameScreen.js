@@ -33,12 +33,11 @@ export default function StartGameScreen({onPickNumber}) {
           style:'destructive', 
           onPress: resetInputHandler
         }]); //alert notification
-      console.log('return an error');
+      // console.log('return an error');
       return;
     }
     //If valid, move to the next page, (game screen)
     onPickNumber(chosenNumber);//see details in APP file.
-    console.log(`picked number ${chosenNumber}`)
   }
 
   return (

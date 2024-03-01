@@ -52,6 +52,10 @@ If the error you are experiencing is related to styling, make sure you consider 
 
 ## Bag of tricks
 
+This section we mostly talk about fun error you might run into with expo
+
 If expo suddenly stops working and you get an error about the system not correcting to the server, try running `watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start --reset-cache`
 
 If you are having issue with expo on your phone you can always try just clearing the phone's cache by running `npm start --reset-cache`
+
+Expo shows, 'non-std C++ exception' try `lsof -t -i :8081 | xargs kill` and then run the cache reset.
