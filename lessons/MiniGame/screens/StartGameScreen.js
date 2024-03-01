@@ -9,6 +9,7 @@ import { useState } from "react";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import Colors from "../constants/colors"
 import Title from "../components/ui/Title";
+import Card from "../components/ui/Card";
 
 
 export default function StartGameScreen({onPickNumber}) {
@@ -44,8 +45,8 @@ export default function StartGameScreen({onPickNumber}) {
   return (
     <View style={styles.rootContainer}>
       <Title>Guess My Number</Title>
-      <View style={styles.inputContainer}>
-      <Text style={styles.instructionText}>Enter a number</Text>
+      <Card>
+      <Text style={styles.instructionText}>Enter A Number</Text>
       <TextInput 
         style={styles.numInput} 
         maxLength={2} 
@@ -66,7 +67,7 @@ export default function StartGameScreen({onPickNumber}) {
               Confirm</PrimaryButton>
           </View>
         </View>
-      </View>
+      </Card>
     </View>
   )
 };
@@ -76,21 +77,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 100,
     alignItems: 'center'
-  },
-
-  inputContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 36,
-    marginHorizontal: 24,
-    padding:16,
-    backgroundColor: Colors.primary700,
-    borderRadius: 8,
-    elevation: 4,
-    shadowColor: 'black',
-    shadowOpacity: 0.25,
-    shadowRadius: 6,
-    shadowOffset: {width: 0, height: 2},
   },
 
   instructionText: {
