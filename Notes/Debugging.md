@@ -49,3 +49,7 @@ If this doesn't work, try to reload the emulation. You should see a lay out of t
 ## Logic
 
 If the error you are experiencing is related to styling, make sure you consider the [structure](./Styling.md/#structure) of the element.
+
+## Bag of tricks
+
+If expo suddenly stops working and you get an error about the system not correcting to the server, try running `watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start --reset-cache`
