@@ -72,13 +72,17 @@ export default function GameScreen({ answer, onGameOver }) {
       </View>
       <Card>
         <InstructionText>Go higher or lower?</InstructionText>
-        <View>
-          <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
-            -
-          </PrimaryButton>
-          <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
-            +
-          </PrimaryButton>
+        <View style={styles.buttonsContain}>
+          <View style={styles.buttonContain}>
+            <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
+              -
+            </PrimaryButton>
+          </View>
+          <View style={styles.buttonContain}>
+            <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
+              +
+            </PrimaryButton>
+          </View>
         </View>
       </Card>
       {/* <View>LOG ROUNDS</View>*/}
@@ -92,4 +96,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     padding: 12,
   },
+
+  buttonsContain: {
+    flexDirection: 'row',
+    margin: 0
+  },
+
+  buttonContain: {
+    flex: 2
+  }
 });
