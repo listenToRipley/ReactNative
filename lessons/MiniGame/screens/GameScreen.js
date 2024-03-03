@@ -76,12 +76,12 @@ export default function GameScreen({ answer, onGameOver }) {
         <View style={styles.buttonsContain}>
           <View style={styles.buttonContain}>
             <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
-              <Ionicons name="md-remove" />
+              <Ionicons name="md-remove" size={24} color="white" />
             </PrimaryButton>
           </View>
           <View style={styles.buttonContain}>
             <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
-              <Ionicons name="md-add"/>
+              <Ionicons name="md-add" size={24} color="white"/>
             </PrimaryButton>
           </View>
         </View>
