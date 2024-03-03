@@ -121,6 +121,8 @@ You can create something that seems like a CSS sheet, by passing additional styl
 
 Order will matter when you pass in props style since the later styles can clash and cancel each other out.
 
+It should not matter if additional styling elements are not passed as props on other components that use the same element since the additionally passed styles are considered optional.
+
 ## Misc 
 
 *This section covers random notes about styling in Native*
