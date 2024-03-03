@@ -115,6 +115,12 @@ Since we cannot use CSS, in order to share values across your application, you c
 
 Example: [Colors](../lessons/MiniGame/constants/colors.js)
 
+## Props
+
+You can create something that seems like a CSS sheet, by passing additional styles through Props and then combined those different styles into one by using an array inside your inline style. [See instruction text for an example](../lessons/MiniGame/components/ui/InstructionsText.js)
+
+Order will matter when you pass in props style since the later styles can clash and cancel each other out.
+
 ## Misc 
 
 *This section covers random notes about styling in Native*

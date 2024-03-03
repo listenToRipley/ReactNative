@@ -57,6 +57,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Images](./Styling.md/#images)
 - [Gradients](./Styling.md/#gradients)
 - [Constants](./Styling.md/#constants)
+- [Props](./Styling.md/#props)
 - [Random Notes](./Styling.md/#misc)
 
 1. [Debugging](./Debugging.md)
