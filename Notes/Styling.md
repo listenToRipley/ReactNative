@@ -123,6 +123,14 @@ Order will matter when you pass in props style since the later styles can clash 
 
 It should not matter if additional styling elements are not passed as props on other components that use the same element since the additionally passed styles are considered optional.
 
+## Icons
+
+Expo provides an [import of vector-icons](https://docs.expo.dev/guides/icons/). You will import the specific library you want use, and then use the library name as the component in place of the icons, add a name attribute and provide for the specific icon. [See example here](../lessons/MiniGame/screens/GameScreen.js).
+
+[View the whole list of icons here](https://icons.expo.fyi/Index).
+
+## Custom Fonts
+
 ## Misc 
 
 *This section covers random notes about styling in Native*

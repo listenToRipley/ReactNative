@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
@@ -75,12 +76,12 @@ export default function GameScreen({ answer, onGameOver }) {
         <View style={styles.buttonsContain}>
           <View style={styles.buttonContain}>
             <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
-              -
+              <Ionicons name="md-remove" />
             </PrimaryButton>
           </View>
           <View style={styles.buttonContain}>
             <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
-              +
+              <Ionicons name="md-add"/>
             </PrimaryButton>
           </View>
         </View>
