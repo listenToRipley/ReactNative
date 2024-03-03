@@ -71,7 +71,7 @@ export default function GameScreen({ answer, onGameOver }) {
         <NumberContainer>{currentGuess}</NumberContainer>
       </View>
       <Card>
-        <InstructionText styles={styles.instructionText}>Go higher or lower?</InstructionText>
+        <InstructionText style={styles.instructionText}>Go higher or lower?</InstructionText>
         <View style={styles.buttonsContain}>
           <View style={styles.buttonContain}>
             <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
