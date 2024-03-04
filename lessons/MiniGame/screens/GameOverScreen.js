@@ -1,11 +1,16 @@
-import { View, Text, StyleSheet } from "react-native";
+import { 
+  View, 
+  Title, 
+  StyleSheet,
+   } from "react-native";
 import PrimaryButton from "../components/ui/PrimaryButton";
 
 export default function GameOverScreen({resetGame}) {
 
   return(
     <View>
-      <Text>GAME OVER!</Text>
+      <Title>GAME OVER!</Title>
+
       <PrimaryButton onSubmit={resetGame}>Play Again?</PrimaryButton>
     </View>
   )

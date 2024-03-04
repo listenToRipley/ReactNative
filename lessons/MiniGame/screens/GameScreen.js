@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Alert,
 } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import Title from "../components/ui/Title";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
@@ -71,14 +72,18 @@ export default function GameScreen({ answer, onGameOver }) {
         <NumberContainer>{currentGuess}</NumberContainer>
       </View>
       <Card>
-        <InstructionText>Go higher or lower?</InstructionText>
-        <View>
-          <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
-            -
-          </PrimaryButton>
-          <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
-            +
-          </PrimaryButton>
+        <InstructionText style={styles.instructionText}>Go higher or lower?</InstructionText>
+        <View style={styles.buttonsContain}>
+          <View style={styles.buttonContain}>
+            <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'lower')}>
+              <Ionicons name="md-remove" size={24} color="white" />
+            </PrimaryButton>
+          </View>
+          <View style={styles.buttonContain}>
+            <PrimaryButton onSubmit={nextGuessHandler.bind(this, 'higher')}>
+              <Ionicons name="md-add" size={24} color="white"/>
+            </PrimaryButton>
+          </View>
         </View>
       </Card>
       {/* <View>LOG ROUNDS</View>*/}
@@ -92,4 +97,17 @@ const styles = StyleSheet.create({
     marginTop: 10,
     padding: 12,
   },
+
+  buttonsContain: {
+    flexDirection: 'row',
+    margin: 0
+  },
+
+  buttonContain: {
+    flex: 2
+  },
+
+  instructionText: {
+    marginBottom: 12
+  }
 });

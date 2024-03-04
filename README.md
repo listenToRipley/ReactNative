@@ -53,4 +53,4 @@ This is a beginning review of what some functionality of Native looks like via a
 
 ## Credits
 
-The [dice image used in the MiniGame](./lessons/MiniGame/images/diceRoll.jpg), was pulled from [Unsplashed](https://unsplash.com/photos/closeup-photo-of-dices-m4sGYaHYN5o).
+The [dice image used in the MiniGame](./lessons/MiniGame/assets/images/diceRoll.jpg), was pulled from [Unsplashed](https://unsplash.com/photos/closeup-photo-of-dices-m4sGYaHYN5o).

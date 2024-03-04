@@ -115,6 +115,36 @@ Since we cannot use CSS, in order to share values across your application, you c
 
 Example: [Colors](../lessons/MiniGame/constants/colors.js)
 
+## Props
+
+You can create something that seems like a CSS sheet, by passing additional styles through Props and then combined those different styles into one by using an array inside your inline style. [See instruction text for an example](../lessons/MiniGame/components/ui/InstructionsText.js)
+
+Order will matter when you pass in props style since the later styles can clash and cancel each other out.
+
+It should not matter if additional styling elements are not passed as props on other components that use the same element since the additionally passed styles are considered optional.
+
+## Icons
+
+Expo provides an [import of vector-icons](https://docs.expo.dev/guides/icons/). You will import the specific library you want use, and then use the library name as the component in place of the icons, add a name attribute and provide for the specific icon. [See example here](../lessons/MiniGame/screens/GameScreen.js).
+
+[View the whole list of icons here](https://icons.expo.fyi/Index).
+
+## Custom Fonts
+
+If you are using a specific font, then make sure it is imported directly on the [app file aka root](../lessons/MiniGame/App.js). 
+
+Expo makes custom fonts a little easier by using `expo install expo-font`. 
+
+This exposes a react hook that can be used,`useFonts` imported on the app file, to load fonts. You will pass a object about the fonts that should be loaded at the root.
+
+You will have to create a reference name inside the object, require the path to the font you want to use. The useFonts actually returns an array, the first element of the array is a boolean that states if they font has been loaded completely.
+
+Once everything is set up on the root, you should be able to use the object key in your style objects under `fontFamily`.
+
+If is the best practice to provide a [loading screen](./Misc.md/#loading-screen) while this information is being fetched.
+
+[View official docs about this](https://docs.expo.dev/develop/user-interface/fonts/).
+
 ## Misc 
 
 *This section covers random notes about styling in Native*

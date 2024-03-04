@@ -19,3 +19,9 @@ Some of the common ones are
 ## Navigation
 
 One option is you can use conditional on the App.js to determine which screen should currently be rendered.
+
+## Loading Screen
+
+Use the "splash" (background images), with a loading icon while you are waiting for specific content to fetched. 
+
+Use the `expo install expo-app-loading`, [detail here](https://www.npmjs.com/package/expo-app-loading).

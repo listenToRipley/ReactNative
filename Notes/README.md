@@ -57,12 +57,17 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Images](./Styling.md/#images)
 - [Gradients](./Styling.md/#gradients)
 - [Constants](./Styling.md/#constants)
+- [Props](./Styling.md/#props)
+- [Icons](./Styling.md/#icons)
+- [Custom Fonts](./Styling.md/#custom-fonts)
 - [Random Notes](./Styling.md/#misc)
 
 1. [Debugging](./Debugging.md)
 1. [Misc](./Misc.md)
+
 - [Methods - Alerts](./Misc/#methods)
 - [Navigation](./Misc.md/#navigation)
+- [Loading Screen](./Misc.md/#loading-screen)
 
 ## Glossary
 
