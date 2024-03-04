@@ -64,8 +64,10 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 
 1. [Debugging](./Debugging.md)
 1. [Misc](./Misc.md)
+
 - [Methods - Alerts](./Misc/#methods)
 - [Navigation](./Misc.md/#navigation)
+- [Loading Screen](./Misc.md/#loading-screen)
 
 ## Glossary
 

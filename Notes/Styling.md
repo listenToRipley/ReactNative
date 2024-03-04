@@ -131,11 +131,17 @@ Expo provides an [import of vector-icons](https://docs.expo.dev/guides/icons/). 
 
 ## Custom Fonts
 
-If you are using a specific font, then make sure it is imported directly on the [app file](../lessons/MiniGame/App.js). 
+If you are using a specific font, then make sure it is imported directly on the [app file aka root](../lessons/MiniGame/App.js). 
 
 Expo makes custom fonts a little easier by using `expo install expo-font`. 
 
 This exposes a react hook that can be used,`useFonts` imported on the app file, to load fonts. You will pass a object about the fonts that should be loaded at the root.
+
+You will have to create a reference name inside the object, require the path to the font you want to use. The useFonts actually returns an array, the first element of the array is a boolean that states if they font has been loaded completely.
+
+Once everything is set up on the root, you should be able to use the object key in your style objects under `fontFamily`.
+
+If is the best practice to provide a [loading screen](./Misc.md/#loading-screen) while this information is being fetched.
 
 [View official docs about this](https://docs.expo.dev/develop/user-interface/fonts/).
 
