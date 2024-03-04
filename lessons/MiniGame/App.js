@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { 
   StyleSheet, 
   ImageBackground, 
-  View,
 SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
@@ -51,7 +50,7 @@ export default function App() {
   return (
     <LinearGradient colors={[Colors.primary700,Colors.accent500]} style={styles.rootScreen}>
       <ImageBackground 
-        source={require('./images/diceRoll.jpg')} 
+        source={require('./assets/images/diceRoll.jpg')} 
         resizeMode="cover"
         imageStyle={styles.backgroundImage}
         style={styles.rootScreen}
