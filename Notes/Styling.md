@@ -99,6 +99,8 @@ These together create the same functionality as a shadow box in standard CSS.
 
 Images will have a special styling option called `imageStyle`, which has a higher precedence than other styles provided. You will still created the CSS within styles, and best practice dictates this should be placed at the bottom of the CSS content.
 
+You can then apply styling directly to the image. If you use percentages on the image, then those percentages will refer to the parent container's values.
+
 ### Background Images
 
 You can include a background image on your app as well by using the `ImageBackground` element provided by Native. Make sure it is the parent of the element you want to see the image on.
