@@ -8,7 +8,7 @@ import Title from "../components/ui/Title";
 import Colors from "../constants/colors";
 import PrimaryButton from "../components/ui/PrimaryButton";
 
-export default function GameOverScreen({resetGame}) {
+export default function GameOverScreen({resetGame, rounds, answer}) {
 
   return(
     <View style={styles.rootContainer}>
@@ -17,8 +17,8 @@ export default function GameOverScreen({resetGame}) {
         <Image style={styles.image} source={require('../assets/images/success.png')}/>
       </View>
       <Text style={styles.summaryText}>Your phone needed 
-        <Text style={styles.highlight}> X</Text> rounds to guess the number 
-        <Text style={styles.highlight}> Y</Text></Text>
+        <Text style={styles.highlight}> {rounds}</Text> rounds to guess the number 
+        <Text style={styles.highlight}> {answer}</Text></Text>
       <PrimaryButton onSubmit={resetGame}>Play Again?</PrimaryButton>
     </View>
   )
@@ -50,7 +50,9 @@ const styles = StyleSheet.create({
 
   summaryText: {
     fontFamily: 'open-sans',
-    paddingBottom: 36
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: 24
   },
 
   highlight: {

@@ -18,9 +18,9 @@ function generateRandomBetween(min, max, exclude) {
   if (rndNum === exclude) {
     return generateRandomBetween(min, max, exclude);
   } else {
-    return rndNum;
+    return rndNum
   }
-}
+};
 
 let minBoundary = 1;
 let maxBoundary = 100;
@@ -38,6 +38,11 @@ export default function GameScreen({ answer, onGameOver }) {
       onGameOver();
     }
   }, [currentGuess, answer, onGameOver]);
+
+  useEffect(() => {
+    minBoundary = 1;
+    maxBoundary = 100;
+  }, [])
 
   function nextGuessHandler(direction) {
     console.log('clicked : ', direction)
