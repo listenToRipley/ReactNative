@@ -34,6 +34,8 @@ ScrollView will always rending the whole element. This can cause some issues for
 
 If you are trying to scroll through a list, or items that need dynamic for large elements, a better option would be FlatList. This will render items that are current visible, making it take up less space.
 
+### FlatList
+
 With FlatList, you basically build in your map function directly to it. You provide a prop of data, that being your array and then renderItem which tells how your want each item to be returned. Since the list we provide becomes an object with metadata, this is important to realize for the renderItem. You will have some automated language passed through the object, such as the index and "item" being the content, so you will need to you key accessing to get that information and display it correctly.
 
 Best practice is to create object lists and include a key to be generated and then access it in each item inside the renderItem. There  a specific ways you can extract a key always from your item, [make sure to look over the official documentation for FlatLists](https://reactnative.dev/docs/flatlist).

@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Alert,
   Text,
+  FlatList
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Title from "../components/ui/Title";
@@ -95,7 +96,12 @@ export default function GameScreen({ answer, onGameOver }) {
         </View>
       </Card>
       <View style={styles.roundCounter}>
-        {guesses.map(guess => <Text key={guess}>{guess}</Text>)}
+        {/* {guesses.map(guess => <Text key={guess}>{guess}</Text>)} */}
+        <FlatList
+          data={guesses}
+          renderItem={(itemData)=> <Text>{itemData.item}</Text>}
+          keyExtractor={(item) => item}
+        />
       </View>
     </View>
   )
