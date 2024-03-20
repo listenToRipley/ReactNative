@@ -95,7 +95,7 @@ export default function GameScreen({ answer, onGameOver }) {
         </View>
       </Card>
       <View style={styles.roundCounter}>
-        {guesses.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)}
+        {guesses.map(guess => <Text key={guess}>{guess}</Text>)}
       </View>
     </View>
   )
