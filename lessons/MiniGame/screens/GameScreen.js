@@ -3,6 +3,7 @@ import {
   View, 
   StyleSheet,
   Alert,
+  Text,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import Title from "../components/ui/Title";
@@ -32,6 +33,7 @@ export default function GameScreen({ answer, onGameOver }) {
     answer
   );
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
+  const [guesses, setGuesses] = useState([initialGuess]);
 
   useEffect(() => {
     if (currentGuess === answer) {
@@ -45,7 +47,7 @@ export default function GameScreen({ answer, onGameOver }) {
   }, [])
 
   function nextGuessHandler(direction) {
-    console.log('clicked : ', direction)
+    // console.log('clicked : ', direction)
     if (
       (direction === 'lower' && currentGuess < answer) ||
       (direction === 'higher' && currentGuess > answer)
@@ -68,6 +70,7 @@ export default function GameScreen({ answer, onGameOver }) {
       currentGuess
     );
     setCurrentGuess(newRndNum);
+    setGuesses(previousGuesses => [newRndNum,...previousGuesses]);
   };
 
   return (
@@ -91,7 +94,9 @@ export default function GameScreen({ answer, onGameOver }) {
           </View>
         </View>
       </Card>
-      {/* <View>LOG ROUNDS</View>*/}
+      <View style={styles.roundCounter}>
+        {guesses.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)}
+      </View>
     </View>
   )
 }
@@ -114,5 +119,10 @@ const styles = StyleSheet.create({
 
   instructionText: {
     marginBottom: 12
+  },
+
+  roundCounter: {
+    fontSize: 24,
+    color: 'red'
   }
 });
