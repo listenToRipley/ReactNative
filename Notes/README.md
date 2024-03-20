@@ -41,6 +41,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Images](./Components.md/#images)
 - [Custom](./Components.md/#custom)
 - [Safe Area View](./Components.md/#safe-area-view)
+- [Text](./Components.md/#text)
 
 1. [Logic](./Logic.md)
     - [Built in functions](./Logic.md/#built-in-functions)
@@ -50,6 +51,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [System Specific](./Styling.md/#system-specific)
 - [Expo Specific](./Styling.md/#expo-specific)
 - [View & Scrolling](./Styling.md/#views--scrolling)
+- [FlatList](./Styling.md/#flatlist)
 - [Targeting Different Platforms](./Styling.md/#targeting-different-platforms)
 - [Layout and Flexbox](./Styling.md/#layouts-and-flexbox)
 - [Structure](./Styling.md/#structure)

@@ -86,3 +86,9 @@ The important thing to remember about pre-built components is at their core they
 `SafeAreaView` - This helps with provides automated spacing based on the system you are running on. 
 
 Usually this is imported at the `App.js` of your document so it will apply to the whole application. This should be applied to the main body, not before any background or all applying content.
+
+## Text
+
+Text can hold other text components to allow for grouping. This can also allow for specific styling types to be added to specific text.
+
+While you can set the specific nested elements to their own lines, this will not effect the text display on the screen. Spacing will also be respected.
