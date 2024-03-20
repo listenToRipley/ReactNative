@@ -41,6 +41,7 @@ Is easier to integrate with native source code, (Java, Objective-C, Kotlin or Sw
 - [Images](./Components.md/#images)
 - [Custom](./Components.md/#custom)
 - [Safe Area View](./Components.md/#safe-area-view)
+- [Text](./Components.md/#text)
 
 1. [Logic](./Logic.md)
     - [Built in functions](./Logic.md/#built-in-functions)
